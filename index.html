@@ -1,0 +1,302 @@
+<!DOCTYPE html>
+<html lang="ar" dir="rtl">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="theme-color" content="#fff8f8">
+
+    <title>دعوة فرح إسلام ودينا</title>
+    <meta name="description" content="دعوتكم لمشاركتنا أجمل يوم في حياة إسلام ودينا.">
+
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Amiri:wght@400;700&family=Cairo:wght@400;500;600;700&display=swap" rel="stylesheet">
+
+    <link rel="stylesheet" href="style.css">
+    <script src="script.js" defer></script>
+</head>
+
+<body>
+    <!-- شاشة البداية -->
+    <section class="intro-screen" id="introScreen">
+        <div class="intro-background"></div>
+        <div class="intro-overlay"></div>
+
+        <div class="intro-content">
+            <span class="intro-flower">✿</span>
+            <p class="intro-subtitle">بكل الحب والسعادة</p>
+
+            <h1 class="intro-names">
+                Islam <span>&</span> Dina
+            </h1>
+
+            <p class="intro-description">
+                ندعوكم لمشاركتنا أجمل لحظات العمر
+            </p>
+
+            <div class="envelope" id="envelope">
+                <div class="envelope-letter">♡</div>
+                <div class="envelope-body"></div>
+                <div class="envelope-flap"></div>
+            </div>
+
+            <button class="primary-button open-button" id="openInvitation" type="button">
+                افتح دعوتك ♡
+            </button>
+
+            <p class="music-status" id="musicStatus">
+            </p>
+        </div>
+    </section>
+
+    <!-- محتوى الدعوة -->
+    <main id="invitation" class="invitation hidden">
+
+        <!-- شريط الموسيقى -->
+        <div class="music-bar">
+            <span>♪ موسيقى يومنا المميز</span>
+            <button id="musicButton" class="music-button" type="button">
+                إيقاف الموسيقى
+            </button>
+        </div>
+
+        <!-- المقدمة -->
+        <section class="hero section-padding">
+            <div class="hero-ornament ornament-top">❀</div>
+
+            <p class="eyebrow">بِسْمِ اللهِ الرَّحْمَنِ الرَّحِيمِ</p>
+
+            <p class="hero-intro">
+                وَمِنْ آيَاتِهِ أَنْ خَلَقَ لَكُم مِّنْ أَنْفُسِكُمْ أَزْوَاجًا
+            </p>
+
+            <div class="hero-divider"><span>♡</span></div>
+
+            <p class="eyebrow">بكل الحب ندعوكم لحضور حفل زفاف</p>
+
+            <h2 class="couple-names">
+                <span data-groom>إسلام</span>
+                <span class="ampersand">&</span>
+                <span data-bride>دينا</span>
+            </h2>
+
+            <p class="hero-message">
+                فرحتنا لا تكتمل إلا بوجودكم ومشاركتكم أجمل أيام حياتنا
+            </p>
+
+            <div class="hero-date">
+                <span class="date-icon">✿</span>
+                <span id="heroDateText">الجمعة، 25 ديسمبر 2026</span>
+            </div>
+
+            <div class="hero-ornament ornament-bottom">❀</div>
+        </section>
+
+        <!-- العد التنازلي -->
+        <section class="countdown-section section-padding reveal">
+            <p class="eyebrow">اللحظة المنتظرة تقترب</p>
+            <h2 class="section-title">باقي على فرحتنا</h2>
+
+            <div class="countdown" dir="rtl">
+                <div class="countdown-box">
+                    <strong id="days">00</strong>
+                    <span>يوم</span>
+                </div>
+                <div class="countdown-box">
+                    <strong id="hours">00</strong>
+                    <span>ساعة</span>
+                </div>
+                <div class="countdown-box">
+                    <strong id="minutes">00</strong>
+                    <span>دقيقة</span>
+                </div>
+                <div class="countdown-box">
+                    <strong id="seconds">00</strong>
+                    <span>ثانية</span>
+                </div>
+            </div>
+
+            <p id="countdownMessage" class="muted-text">
+                مستنيين اليوم الجميل معاكم ♡
+            </p>
+        </section>
+
+        <!-- تفاصيل الفرح -->
+        <section class="details-section section-padding reveal">
+            <p class="eyebrow">احفظوا الموعد</p>
+            <h2 class="section-title">تفاصيل يومنا</h2>
+
+            <div class="details-grid">
+                <article class="detail-card">
+                    <span class="detail-icon">♡</span>
+                    <h3>موعد الفرح</h3>
+                    <p id="detailDate">الجمعة، 25 ديسمبر 2026</p>
+                </article>
+
+                <article class="detail-card">
+                    <span class="detail-icon">◷</span>
+                    <h3>الساعة</h3>
+                    <p id="detailTime">التاسعه مساءً</p>
+                </article>
+
+                <article class="detail-card">
+                    <span class="detail-icon">♧</span>
+                    <h3>مكان الاحتفال</h3>
+                    <p id="detailVenue">قاعة كرستال</p>
+                    <p class="muted-text" id="detailAddress">خلف بنك مصر، كفر الشيخ، مصر</p>
+                </article>
+            </div>
+
+            <button id="calendarButton" class="outline-button" type="button">
+                أضف الموعد إلى التقويم ♡
+            </button>
+        </section>
+
+        <!-- الخريطة -->
+        <section class="location-section section-padding reveal" id="locationMap">
+            <p class="eyebrow">نتشرف بوجودكم</p>
+            <h2 class="section-title">طريقكم لفرحتنا</h2>
+
+            <p class="section-description">
+                مستنيينكم تنورونا وتشاركونا أجمل لحظات العمر
+            </p>
+
+            <div class="map-card">
+                <div class="map-header">
+                    <div class="map-pin">⌖</div>
+                    <div>
+                        <h3 id="mapVenueName">قاعة كرستال</h3>
+                        <p id="mapVenueAddress">خلف بنك مصر، كفر الشيخ، مصر</p>
+                    </div>
+                </div>
+
+                <div class="map-frame">
+                    <iframe id="weddingMap" title="خريطة مكان الفرح" src="https://maps.google.com/maps?q=31.1281676,30.6410813&z=17&output=embed" loading="lazy" allowfullscreen>
+                    </iframe>
+                </div>
+
+                <a id="openMapDirections" class="primary-button map-button" href="https://www.google.com/maps/place/%D9%82%D8%A7%D8%B9%D8%A9+%D9%85%D8%A7%D8%B1%D8%A7%D8%AF%D9%88%D9%86%D8%A7+%D8%B3%D8%AA%D8%A7%D8%B1%E2%80%AD/@31.1283683,30.6421805,18.1z/data=!4m6!3m5!1s0x14f65b6b6f187219:0xefd121f418f0982f!8m2!3d31.1281676!4d30.6410813!16s%2Fg%2F11c43q5rrd?entry=ttu"
+                    target="_blank" rel="noopener noreferrer">
+                    افتح الطريق للقاعة ↗
+                </a>
+            </div>
+
+            <p class="map-footer">وجودكم هو أجمل هدية لينا ♡</p>
+        </section>
+
+        <!-- معرض الصور -->
+        <section class="gallery-section section-padding reveal">
+            <p class="eyebrow">لحظات من حكايتنا</p>
+            <h2 class="section-title">ذكرياتنا الجميلة</h2>
+
+            <p class="section-description">
+                كل صورة حكاية، وكل لحظة بتجمعنا ليها ذكرى
+            </p>
+
+            <div class="gallery-grid">
+                <button class="gallery-item" type="button" aria-label="عرض الصورة الأولى">
+                    <img src="assets/gallery-1.jpg" alt="صورة من ذكريات العروسين" loading="lazy">
+                    <span>♡</span>
+                </button>
+
+                <button class="gallery-item" type="button" aria-label="عرض الصورة الثانية">
+                    <img src="assets/gallery-2.jpg" alt="ذكرى جميلة للعروسين" loading="lazy">
+                    <span>♡</span>
+                </button>
+
+                <button class="gallery-item" type="button" aria-label="عرض الصورة الثالثة">
+                    <img src="assets/gallery-3.jpg" alt="لحظة مميزة للعروسين" loading="lazy">
+                    <span>♡</span>
+                </button>
+            </div>
+        </section>
+
+        <!-- نافذة تكبير الصور -->
+        <div class="lightbox" id="lightbox" aria-hidden="true">
+            <button id="lightboxClose" class="lightbox-close" type="button" aria-label="إغلاق الصورة">×</button>
+            <img id="lightboxImage" src="" alt="صورة مكبرة">
+        </div>
+
+        <!-- التهنئة -->
+        <section class="wishes-section section-padding reveal">
+            <p class="eyebrow">شاركونا فرحتنا</p>
+            <h2 class="section-title">كلمة من القلب</h2>
+
+            <p class="section-description">
+                اكتبوا لنا أجمل كلمات التهنئة والدعوات
+            </p>
+
+            <form id="wishesForm" class="wishes-form">
+                <label for="wishesName">اسمك</label>
+                <input id="wishesName" name="name" type="text" placeholder="اكتب اسمك هنا" maxlength="80" required>
+
+                <label for="wishesMessage">رسالة التهنئة</label>
+                <textarea id="wishesMessage" name="message" placeholder="اكتب تهنئتك للعروسين..." rows="4" maxlength="1000" required></textarea>
+
+                <button class="primary-button" type="submit">
+                    إرسال التهنئة ♡
+                </button>
+
+                <p id="wishesStatus" class="form-status" role="status"></p>
+            </form>
+        </section>
+
+        <!-- مشاركة الدعوة -->
+        <section class="share-section section-padding reveal">
+            <div class="share-heart">♡</div>
+            <h2 class="section-title">فرحتنا بيكم تكمل</h2>
+
+            <p class="section-description">
+                شاركوا دعوتنا مع أحبابكم
+            </p>
+
+            <div class="share-buttons">
+                <button id="shareButton" class="primary-button" type="button">
+                    شارك الدعوة
+                </button>
+
+                <button id="copyButton" class="outline-button" type="button">
+                    انسخ رابط الدعوة
+                </button>
+            </div>
+        </section>
+
+        <!-- الختام -->
+        <footer class="footer">
+            <div class="footer-flower">❀</div>
+            <p>وجودكم يسعدنا ويزيد فرحتنا</p>
+
+            <h2>
+                <span data-groom>إسلام</span>
+                <span>&</span>
+                <span data-bride>دينا</span>
+            </h2>
+
+            <p class="footer-small">صُنعت بكل الحب ♡</p>
+        </footer>
+
+    </main>
+
+    <!-- الموسيقى -->
+    <audio id="weddingMusic" src="assets/music.mp3" preload="auto" loop>
+    </audio>
+    <footer class="developer-footer">
+        <h3>Need a Wedding Invitation?</h3>
+        <p>Let's Create Something Beautiful Together</p>
+
+        <a href="https://wa.me/201012087282?text=Hello%20Seif%2C%20I%20want%20to%20book%20a%20wedding%20invitation." target="_blank" rel="noopener noreferrer" class="book-invitation-btn">
+        Book Your Invitation
+    </a>
+
+        <div class="developer-credit">
+            Designed & Developed by
+            <a href="https://github.com/seif-elneary" target="_blank" rel="noopener noreferrer">
+            Seif Elneary
+        </a>
+        </div>
+    </footer>
+
+</body>
+
+</html>
